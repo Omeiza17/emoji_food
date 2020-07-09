@@ -15,6 +15,7 @@ class _FoodTabState extends State<FoodTab> {
         children: <Widget>[
           _buildListItem('Delicious hot dog', 4.0, '6', 'assets/hotdog.png'),
           _buildListItem('Cheese pizza', 5.0, '12', 'assets/pizza.png'),
+          _buildListItem('Scrummy sandwich', 5.0, '9', 'assets/sandwich.png'),
         ],
       ),
     );

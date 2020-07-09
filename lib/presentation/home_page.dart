@@ -1,3 +1,4 @@
+import 'package:emoji_food/presentation/food_item_page.dart';
 import 'package:emoji_food/presentation/food_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -182,7 +183,16 @@ class _HomePageState extends State<HomePage>
       padding: EdgeInsets.only(left: 16.0),
       child: InkWell(
         onTap: () {
-          print('$foodName');
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => FoodItemPage(
+                heroTag: foodName,
+                foodName: foodName,
+                imgPath: imgPath,
+                pricePerItem: price,
+              ),
+            ),
+          );
         },
         child: Container(
           height: 175.0,
@@ -240,5 +250,3 @@ class _HomePageState extends State<HomePage>
     this._tabController = TabController(length: 4, vsync: this);
   }
 }
-
-// Lat stop : https://youtu.be/A1ski_fjSlY?list=PLogA2UbVIt0rcc9oJvfxEsuDrXR3ZXolB&t=1042
